@@ -56,6 +56,7 @@ body {
     color: var(--light-light);
     background-color: var(--brand-1);
     border-color: var(--brand-1);
+    transition: all 0.15s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -63,6 +64,15 @@ body {
     background-color: var(--brand-3);
     border-color: var(--brand-3);
 }
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+    color: var(--light-light);
+    background-color: var(--brand-2);
+    border-color: var(--brand-2);
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.2);
+    transform: scale(0.975);
+}
+
 
 .btn-outline-primary {
     color: var(--brand-1);
@@ -123,6 +133,65 @@ body {
 
 #theme label:active:after {
     width: 45px;
+}
+
+
+.input__styled {
+    width: 100%;
+    height: 38px;
+    position: relative;
+
+}
+
+.input__styled > span.material-icons {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--bs-secondary);
+    transition: color 0.15s ease-in;
+}
+
+.input__styled input {
+    width: 100%;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 8px 12px 8px 38px;
+    position: absolute;
+    inset: 0;
+}
+
+.input__styled input:focus {
+   box-shadow: 0 0 6px 3px rgba(253, 157, 13, 0.25);
+}
+
+.input__styled input:focus + span.material-icons {
+   color: var(--brand-1);
+}
+
+.input__error{
+    border: 2px solid var(--bs-danger) !important;
+
+}
+
+.input__error__message {
+  font-size: .80rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+a {
+    color: var(--brand-3);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color 0.15s ease-in;
+}
+
+a:hover {
+    color: var(--brand-2);
+   
 }
 
 /* scrollbar style */

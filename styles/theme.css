@@ -14,12 +14,13 @@
   --bg-2: #fff;
 
   --medium-dark: #313638;
+  --medium-medium: #828282;
   --light-light: #e8e9eb;
 
   /* VARIAVEIS BOOTSTRAP */
-  --bs-blue: #0d6efd;
+  --bs-blue: #5D5FEF;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #9B51E0;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
@@ -39,12 +40,17 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-font-sans-serif: 'Mulish', sans-serif, system-ui, -apple-system;
+  --font-Montserrat: 'Montserrat', sans-serif, system-ui, -apple-system;
+  --font-Ubuntu: 'Ubuntu', sans-serif, system-ui, -apple-system;
+
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New" ;
   --bs-gradient: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
+
+  --gradient-brand: linear-gradient(195.03deg, #FF9F1C -18.77%, #F06543 61.05%);
 }
 
 .theme-dark:root {
@@ -65,9 +71,9 @@
   --light-light: #e8e9eb;
 
   /* VARIAVEIS BOOTSTRAP */
-  --bs-blue: #0d6efd;
+  --bs-blue: #5D5FEF;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #9B51E0;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;

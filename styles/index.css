@@ -10,8 +10,8 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.6;
-  background-color: var(--light-light);
+  opacity: 1;
+  background-color: var(--medium-dark);
   transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
@@ -39,4 +39,8 @@
 
 .nav--sign hr {
   width: 100%;
+}
+
+.figure .logo-line {
+  fill: var(--text-standart)
 }
