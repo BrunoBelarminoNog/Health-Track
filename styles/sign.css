@@ -1,0 +1,238 @@
+.background--image {
+  width: 100vw;
+  height: 20vh;
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  background-color: var(--brand-3);
+}
+
+.background--image > svg {
+  width: 100%;
+  height: 20vh;
+  z-index: 5;
+  position: relative;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.theme-dark .background--image svg {
+  width: 100%;
+  height: 20vh;
+  z-index: 5;
+  position: relative;
+  object-fit: cover;
+  opacity: 1;
+}
+
+@keyframes svg_ball_1 {
+  0% {
+    transform: translate(0px, 0px) scale(2);
+  }
+  20% {
+    transform: translate(200px, -300px) scale(1.5);
+  }
+  40% {
+    transform: translate(350px, -500px) scale(2.5);
+  }
+  60% {
+    transform: translate(50px, -600px) scale(2.5);
+  }
+  80% {
+    transform: translate(800px, -800px) scale(1.5);
+  }
+  100% {
+    transform: translate(200px, -400px) scale(1.5);
+  }
+}
+
+@keyframes svg_ball_2 {
+  0% {
+    transform: translate(-200px, -1000px) scale(1);
+  }
+  20% {
+    transform: translate(-200px, -1000px) scale(1);
+  }
+  40% {
+    transform: translate(200px, -1000px) scale(1);
+  }
+  60% {
+    transform: translate(150px, -80px) scale(1);
+  }
+  80% {
+    transform: translate(500px, -300px) scale(1);
+  }
+  100% {
+    transform: translate(210px, -100px) scale(1);
+  }
+}
+
+@keyframes svg_ball_3 {
+  0% {
+    transform: translate(-500px, -1000px) scale(2.5);
+  }
+  20% {
+    transform: translate(300px, -700px) scale(3.5);
+  }
+  40% {
+    transform: translate(-3000px, -2000px) scale(3.2);
+  }
+  60% {
+    transform: translate(-1100px, -1500px) scale(1.5);
+  }
+  80% {
+    transform: translate(-2000px, -700px) scale(1.5);
+  }
+  100% {
+    transform: translate(-100px, -400px) scale(1.5);
+  }
+}
+
+@keyframes svg_ball_4 {
+  0% {
+    transform: translate(0px, 0px) scale(1.5);
+  }
+  20% {
+    transform: translate(40px, 700px) scale(2.5);
+  }
+  40% {
+    transform: translate(-300px, -200px) scale(1.2);
+  }
+  60% {
+    transform: translate(-900px, -900px) scale(1.5);
+  }
+  80% {
+    transform: translate(-200px, 700px) scale(1.5);
+  }
+  100% {
+    transform: translate(-800px, -400px) scale(2);
+  }
+}
+@keyframes svg_ball_5 {
+  0% {
+    transform: translate(0px, 0px) scale(1.5);
+  }
+  20% {
+    transform: translate(-700px, 160px) scale(3.5);
+  }
+  40% {
+    transform: translate(257px, 750px) scale(2);
+  }
+  60% {
+    transform: translate(-157px, -200px) scale(2);
+  }
+  80% {
+    transform: translate(950px, -800px) scale(1.1);
+  }
+  100% {
+    transform: translate(300px, -120px) scale(1);
+  }
+}
+.background--image svg #svg_ball_1--inject-1 {
+  animation: svg_ball_1 10s infinite alternate linear;
+}
+.background--image svg #svg_ball_2--inject-1 {
+  animation: svg_ball_2 10s infinite alternate linear;
+}.background--image svg #svg_ball_3--inject-1 {
+  animation: svg_ball_3 12s infinite alternate linear;
+}
+.background--image svg #svg_ball_4--inject-1 {
+  animation: svg_ball_4 10s infinite alternate linear;
+}
+.background--image svg #svg_ball_5--inject-1 {
+  animation: svg_ball_5 10s infinite alternate linear;
+}
+.logo--sign {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(50px);
+}
+
+.logo--sign--content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--text-standart);
+}
+
+.logo--sign--content svg {
+  width: 50%;
+  height: 100px;
+}
+
+.logo--sign--image {
+  max-width: 180px;
+  mask-image: url("#mask");
+}
+
+.logo--sign__reverse {
+  left: initial;
+  right: 42px;
+}
+
+.nav--sign {
+  width: 100%;
+  max-width: 360px;
+}
+
+.nav--sign hr {
+  width: 100%;
+}
+
+.figure .logo-line {
+  fill: var(--text-standart);
+}
+
+.sign--container {
+  padding-top: 25vh;
+  padding-bottom: 20vh;
+  z-index: 1;
+}
+
+.sign--container--content {
+  max-width: 400px;
+  width: 100%;
+}
+
+.sign--container--content svg {
+  fill: black;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .background--image {
+    width: 50vw;
+    min-height: 100vh;
+    inset: initial;
+    top: 0;
+    left: 0;
+  }
+
+  .background--image__reverse {
+    left: initial;
+    right: 0;
+  }
+
+  .background--image > svg,
+  .theme-dark .background--image > svg {
+    min-height: 100vh;
+  }
+
+  .sign--container {
+    padding-top: 0vh;
+    padding: 72px 0;
+  }
+}

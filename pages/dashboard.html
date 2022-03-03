@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" />
+    <title>Health Track</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Mulish:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <script src="../scripts/svg-inject.min.js"></script>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/dashboard.css" />
+  </head>
+
+  <body>
+    <header
+      id="header-dashboard"
+      class="d-flex flex-row flex-md-column justify-content-md-center py-2 px-md-2 header__dashboard"
+    >
+      <figure class="logo d-none d-md-flex">
+        <img
+          src="../assets/IconDark.svg"
+          alt="Ícone Health Track"
+          onload="SVGInject(this)"
+        />
+      </figure>
+      <nav class="w-100">
+        <ul
+          class="nav w-100 d-flex flex-row flex-md-column flex-nowrap justify-content-center"
+        >
+          <li class="nav-item flex-fill mb-md-4">
+            <a href="#" class="nav-link">
+              <img
+                src="../assets/home.svg"
+                alt="Ínicio"
+                onload="SVGInject(this)"
+              />
+              <span>Ínicio</span>
+            </a>
+          </li>
+          <li class="nav-item flex-fill mb-md-4">
+            <a href="#" class="nav-link">
+              <img
+                src="../assets/profile.svg"
+                alt="Conta"
+                onload="SVGInject(this)"
+              />
+              <span>Conta</span>
+            </a>
+          </li>
+          <li class="nav-item flex-fill mb-md-4">
+            <a href="#" class="nav-link">
+              <img
+                src="../assets/diet.svg"
+                alt="Dietas"
+                onload="SVGInject(this)"
+              />
+              <span>Dietas</span>
+            </a>
+          </li>
+          <li class="nav-item flex-fill mb-md-4">
+            <a href="#" class="nav-link">
+              <img
+                src="../assets/playlist.svg"
+                alt="Playlist"
+                onload="SVGInject(this)"
+              />
+              <span>Playlist</span>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a href="#" class="nav-link">
+              <img
+                src="../assets/gym.svg"
+                alt="Atividades"
+                onload="SVGInject(this)"
+              />
+              <span>Atividades</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-dashboard" class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-6 p-4">
+          <section
+            id="water"
+            class="d-flex align-items-center justify-content-between dashboard__card"
+          >
+            <div class="water__content">
+              <h3>Já se hidratou hoje?</h3>
+              <p>Clique aqui a cada copo d’água de 300ml tomado.</p>
+            </div>
+            <div class="water__data">
+              <span>HOJE</span>
+              <span>10</span>
+            </div>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_w7dge7mr.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              autoplay
+              class="water__animation"
+            ></lottie-player>
+          </section>
+          <section id="activities">
+            <div class="d-flex align-items-baseline">
+              <h2>Atividades</h2>
+              <a href="#">ver mais</a>
+            </div>
+            <div class="activities__card dashboard__card">
+              <div class="dashboard__card__add-button">
+                <div class="dashboard__card__add-button__wrapper">
+                  <lottie-player
+                    src="https://assets2.lottiefiles.com/packages/lf20_judtd3yb.json"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    id="activities__add__button__lottie"
+                    style="width: 70px; height: 70px"
+                  ></lottie-player>
+                </div>
+                <span>Nova atividade</span>
+              </div>
+              <div class="dashboard__card__history w-100">
+                <h3>Histórico</h3>
+                <table class="table table-hover w-100">
+                  <thead>
+                    <tr>
+                      <th scope="col">Atividade</th>
+                      <th scope="col">Carga</th>
+                      <th scope="col">Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Musculação</td>
+                      <td>1h15m</td>
+                      <td>19/02/2022</td>
+                    </tr>
+                    <tr>
+                      <td>Corida</td>
+                      <td>4 km</td>
+                      <td>17/02/2022</td>
+                    </tr>
+                    <tr>
+                      <td>Bike</td>
+                      <td>800 m</td>
+                      <td>05/12/2021</td>
+                    </tr>
+                    <tr>
+                      <td>Yoga</td>
+                      <td>40min</td>
+                      <td class="history__table__date">05/09/2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="activities__favorites">
+              <div class="favorites__carrosel">
+                <ul
+                  class="favorites__activities__cards"
+                  id="favorites-carrosel"
+                >
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/yoga_icon.svg"
+                      alt="Categoria mente"
+                      class="favorites__card__icon"
+                      onload="SVGInject(this)"
+                    />
+                    <img src="../assets/images/meditacao.png" alt="Meditação" />
+                    <h4>Meditação</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/aerobic_icon.svg"
+                      alt="Categoria aeróbico"
+                      class="favorites__card__icon favorites__card__icon--dark"
+                      onload="SVGInject(this)"
+                    />
+                    <img src="../assets/images/corrida.png" alt="Corrida" />
+                    <h4>Corrida</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/yoga_icon.svg"
+                      alt="Categoria mente"
+                      class="favorites__card__icon"
+                      onload="SVGInject(this)"
+                    />
+                    <img src="../assets/images/yoga.png" alt="Yoga" />
+                    <h4>Yoga</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/gym_icon.svg"
+                      alt="Categoria força"
+                      class="favorites__card__icon"
+                      onload="SVGInject(this)"
+                    />
+                    <img
+                      src="../assets/images/musculacao.png"
+                      alt="Musculação"
+                    />
+                    <h4>Musculação</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/aerobic_icon.svg"
+                      alt="Categoria aeróbico"
+                      class="favorites__card__icon"
+                      onload="SVGInject(this)"
+                    />
+                    <img src="../assets/images/natacao.png" alt="Natação" />
+                    <h4>Natação</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/icons/aerobic_icon.svg"
+                      alt="Categoria aeróbico"
+                      class="favorites__card__icon favorites__card__icon--dark"
+                      onload="SVGInject(this)"
+                    />
+                    <img src="../assets/images/bike.png" alt="Bike" />
+                    <h4>Bike</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section id="body">
+            <div class="d-flex align-items-baseline">
+              <h2>Meu corpo</h2>
+              <a href="#">ver mais</a>
+            </div>
+            <div class="body__cards">
+              <div class="body__card body__card__weight">
+                <div class="body__card__data">
+                  <span>72</span>
+                  <span>kg</span>
+                </div>
+                <div class="body__card__title"><h4>Peso</h4></div>
+              </div>
+              <div class="body__card body__card__height">
+                <div class="body__card__data">
+                  <span>180</span>
+                  <span>cm</span>
+                </div>
+                <div class="body__card__title"><h4>Altura</h4></div>
+              </div>
+              <div class="body__card body__card__imc">
+                <lottie-player
+                  src="https://assets7.lottiefiles.com/packages/lf20_bpfhqmjj.json"
+                  background="transparent"
+                  speed="1"
+                  autoplay
+                  style="width: 80px; height: 80px"
+                  class="body__card__imc__image"
+                ></lottie-player>
+                <div class="body__card__content">
+                  <div class="body__card__imc__title d-flex">
+                    <span
+                      class="material-icons-outlined material-icons body__card__help-icon"
+                    >
+                      help_outline
+                    </span>
+                    <h5>IMC</h5>
+                  </div>
+                  <div class="d-flex body__card__data">
+                    <span>4,85</span>
+                    <div class="mx-1">-</div>
+                    <span>sobrepeso</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-12 col-md-6 px-4 px-md-5">
+          <section id="activities">
+            <div class="d-flex align-items-baseline">
+              <h2>Dieta</h2>
+              <a href="#">ver mais</a>
+            </div>
+            <div class="diet__card dashboard__card">
+              <div class="dashboard__card__add-button">
+                <div class="dashboard__card__add-button__wrapper">
+                  <lottie-player
+                    src="https://assets2.lottiefiles.com/packages/lf20_judtd3yb.json"
+                    background="transparent"
+                    speed="1"
+                    id="diet__add__button__lottie"
+                    style="width: 70px; height: 70px"
+                  ></lottie-player>
+                </div>
+                <span>Nova refeição</span>
+              </div>
+              <div class="dashboard__card__history w-100">
+                <h3>Histórico</h3>
+                <table class="table table-hover w-100">
+                  <thead>
+                    <tr>
+                      <th scope="col">Atividade</th>
+                      <th scope="col">Carga</th>
+                      <th scope="col">Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Musculação</td>
+                      <td>1h15m</td>
+                      <td>19/02/2022</td>
+                    </tr>
+                    <tr>
+                      <td>Corida</td>
+                      <td>4 km</td>
+                      <td>17/02/2022</td>
+                    </tr>
+                    <tr>
+                      <td>Bike</td>
+                      <td>800 m</td>
+                      <td>05/12/2021</td>
+                    </tr>
+                    <tr>
+                      <td>Yoga</td>
+                      <td>40min</td>
+                      <td class="history__table__date">05/09/2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="diet__favorites">
+              <div class="favorites__carrosel">
+                <ul id="favorites-diet-carrosel" class="favorites__diet__cards">
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/images/vegetariana.png"
+                      alt="Vegetariana"
+                    />
+                    <h4>Vegeta<br />riana</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/paleo.png" alt="Paleolítica" />
+                    <h4>Paleo<br />lítica</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/lowcarb.png" alt="Low Carb" />
+                    <h4>Low<br />Carb</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/dukin.png" alt="Dukin" />
+                    <h4>Dukan</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/atkins.png" alt="Atkins" />
+                    <h4>Atkins</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/images/south_beach.png"
+                      alt="South Beach"
+                    />
+                    <h4>South<br />Beach</h4>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/images/gluten_free.png"
+                      alt="Glúten Free"
+                    />
+                    <h4>Glúten<br />Free</h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section id="playlists">
+            <div class="d-flex align-items-baseline">
+              <h2>Playlist's</h2>
+              <a href="#">ver mais</a>
+            </div>
+            <div class="d-flex subtitle">
+              <p>
+                Selecionamos as melhores playlists para seus momentos de
+                auto-cuidado.
+              </p>
+            </div>
+            <div class="playlists__favorites">
+              <div class="favorites__carrosel">
+                <ul
+                  id="favorites-playlists-carrosel"
+                  class="favorites__playlists__cards"
+                >
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/images/playlist_1.png"
+                      alt="Vegetariana"
+                    />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>Let's go!</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/spotify_logo.svg"
+                          alt="Playlist Spotify"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img
+                      src="../assets/images/playlist_2.png"
+                      alt="Paleolítica"
+                    />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>Respira,<br />não pira!</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/spotify_logo.svg"
+                          alt="Playlist Spotify"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/playlist_3.png" alt="Low Carb" />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>No Pain,<br />No Gain</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/soundcloud_logo.svg"
+                          alt="Playlist Soundcloud"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/playlist_4.png" alt="Dukin" />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>Workout!</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/soundcloud_logo.svg"
+                          alt="Playlist Soundcloud"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/playlist_5.png" alt="Dukin" />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>Peaceful<br />Meditation</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/spotify_logo.svg"
+                          alt="Playlist Spotify"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/playlist_6.png" alt="Dukin" />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>New<br />Age</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/soundcloud_logo.svg"
+                          alt="Playlist Soundcloud"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="favorites__card">
+                    <img src="../assets/images/playlist_7.png" alt="Dukin" />
+                    <div class="playlist__card__content">
+                      <div class="playlist__card__title">
+                        <h4>Surf<br />Day</h4>
+                      </div>
+                      <div class="playlist__card__service">
+                        <span>por:</span>
+                        <img
+                          src="../assets/icons/soundcloud_logo.svg"
+                          alt="Playlist Soundcloud"
+                          class="playlist__card__icon"
+                          onload="SVGInject(this)"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+    <script src="../scripts/scripts.js"></script>
+    <script src="../scripts/home.js"></script>
+  </body>
+</html>
