@@ -1,0 +1,23 @@
+.background__animate {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--brand-2);
+}
+
+.background__animate::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(70px);
+    z-index: 1;
+}
+
+#particles-js {
+    height: 100%;
+    width: 100%;
+}
