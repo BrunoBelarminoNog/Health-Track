@@ -1,7 +1,5 @@
 const formSignup = document.getElementById("form-signup");
 
-let users;
-
 let fullName;
 let email;
 let emailConfirm;
@@ -30,42 +28,6 @@ function validatePassword(password) {
   const isValid = regex.test(password);
 
   return isValid && password.length >= 8;
-}
-
-function getUsersData() {
-  let usersStorage = JSON.parse(localStorage.getItem("@healtht/users"));
-  console.log("ok");
-  if (!usersStorage) {
-    usersStorage = null;
-  }
-
-  return usersStorage;
-}
-
-function verifyUserExists(email) {
-  if (!users) {
-    users = getUsersData();
-  }
-
-  if (users) {
-    return users.filter((user) => user.email === email).length > 0;
-  }
-
-  return false;
-}
-
-function addUser(user) {
-  if (!users) {
-    users = getUsersData();
-  }
-
-  if (users) {
-    users = [...users, user];
-  } else {
-    users = [user];
-  }
-
-  localStorage.setItem("@healtht/users", JSON.stringify(users));
 }
 
 formSignup.addEventListener("submit", function (e) {

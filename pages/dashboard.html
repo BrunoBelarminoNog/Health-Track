@@ -24,12 +24,172 @@
       crossorigin="anonymous"
     />
 
-    <script src="../scripts/svg-inject.min.js"></script>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/background.css" />
     <link rel="stylesheet" type="text/css" href="../styles/dashboard.css" />
+    <script src="../scripts/svg-inject.min.js"></script>
   </head>
 
   <body>
+    <div id="first-session">
+      <div class="background__animate">
+        <div id="particles-js"></div>
+      </div>
+      <div class="close_icon">
+        <span class="material-icons-outlined material-icons"> close </span>
+      </div>
+      <div class="container">
+        <div class="row" id="first-session-first-step">
+          <div class="col-12">
+            <h1 class="h1">Olá, <span id="first-session-user-name"></span>!</h1>
+            <p>
+              Antes de começarmos a planejar e organizar sua vida saudável,
+              precisamos de mais algumas informações
+            </p>
+          </div>
+          <div class="carrosel__form" id="item-weight">
+            <form action="" class="form_profile">
+              <div class="form_profile___item">
+                <label for="weight"> Quanto pesa (kg)? </label>
+                <div class="counter">
+                  <div class="counter__add">
+                    <span class="material-icons-outlined material-icons">
+                      add
+                    </span>
+                  </div>
+                  <div class="input__counter">
+                    <input
+                      type="text"
+                      pattern="\d*"
+                      maxlength="3"
+                      name="weight"
+                      id="weight"
+                    />
+                    <div class="digit"></div>
+                    <div class="digit"></div>
+                    <div class="digit"></div>
+                  </div>
+                  <div class="counter__remove">
+                    <span class="material-icons-outlined material-icons">
+                      remove
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form_profile___item" id="item-height">
+                <label for="height"> Qual sua altura (cm)? </label>
+                <div class="counter">
+                  <div class="counter__add">
+                    <span class="material-icons-outlined material-icons">
+                      add
+                    </span>
+                  </div>
+                  <div class="input__counter">
+                    <input
+                      type="text"
+                      pattern="\d*"
+                      maxlength="3"
+                      name="height"
+                      id="height"
+                    />
+                    <div class="digit"></div>
+                    <div class="digit"></div>
+                    <div class="digit"></div>
+                  </div>
+                  <div class="counter__remove">
+                    <span class="material-icons-outlined material-icons">
+                      remove
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form_profile___item" id="item-sedentar">
+                <label for="sedentar"
+                  >Indique seu grau de sedentarismo atual:</label
+                >
+                <div class="item_sedentary">
+                  <div class="less_sedentary info__sedentar">
+                    <p>Pouco sedentário</p>
+                  </div>
+                  <div class="option__sedentar"></div>
+                  <div class="option__sedentar"></div>
+                  <div class="option__sedentar"></div>
+                  <div class="option__sedentar"></div>
+                  <div class="option__sedentar"></div>
+
+                  <div class="more_sedentary info__sedentar">
+                    <p>Muito sedentário</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row hidden" id="first-session-second-step">
+          <div class="col-12">
+            <h1 class="h1">
+              Só mais uma pergunta...<br />
+              Qual seu objetivo?
+            </h1>
+            <p>Escolha um ou mais objetivos para o futuro</p>
+          </div>
+          <div class="objective__cards">
+            <div class="objective__card" id="aerobic">
+              <img
+                src="../assets/icons/aerobic.svg"
+                alt="Ícone Health Track"
+                onload="SVGInject(this)"
+              />
+              <h3>Perder peso</h3>
+            </div>
+            <div class="objective__card" id="health">
+              <img
+                src="../assets/icons/health.svg"
+                alt="Ícone Health Track"
+                onload="SVGInject(this)"
+              />
+              <h3>Ter um esilo de vida saudável</h3>
+            </div>
+            <div class="objective__card" id="mind">
+              <img
+                src="../assets/icons/mind.svg"
+                alt="Ícone Health Track"
+                onload="SVGInject(this)"
+              />
+              <h3>Alinhar corpo e mente</h3>
+            </div>
+            <div class="objective__card" id="musculation">
+              <img
+                src="../assets/icons/musculation.svg"
+                alt="Ícone Health Track"
+                onload="SVGInject(this)"
+              />
+              <h3>Ganhar massa muscular</h3>
+            </div>
+          </div>
+        </div>
+        <div class="control__form">
+          <button class="control__previous">
+            <span class="material-icons-outlined material-icons">
+              arrow_back_ios
+            </span>
+          </button>
+          <button class="control__next">
+            <span class="material-icons-outlined material-icons">
+              arrow_forward_ios
+            </span>
+          </button>
+          <button
+            class="control__next__step hidden"
+            id="btn-next-step"
+            disabled
+          >
+            <span class="next__step"> Entrar </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <header
       id="header-dashboard"
       class="d-flex flex-row flex-md-column justify-content-md-center py-2 px-md-2 header__dashboard"
@@ -555,7 +715,8 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+    <script src="../scripts/particles.min.js"></script>
+    <script src="../scripts/users.js"></script>
     <script src="../scripts/scripts.js"></script>
-    <script src="../scripts/home.js"></script>
   </body>
 </html>

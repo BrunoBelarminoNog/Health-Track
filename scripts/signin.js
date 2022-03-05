@@ -1,10 +1,7 @@
 const formSignin = document.getElementById("form-signin");
 
-let users;
-
 let email;
 let password;
-let conection;
 
 function getInputsSignIn() {
   email = document.getElementById("email");
@@ -14,52 +11,6 @@ function getInputsSignIn() {
 
 function compareValues(value1, value2) {
   return value1 === value2;
-}
-
-function getUsersData() {
-  let usersStorage = JSON.parse(localStorage.getItem("@healtht/users"));
-  console.log("ok");
-  if (!usersStorage) {
-    usersStorage = null;
-  }
-
-  return usersStorage;
-}
-
-function verifyUserExists(email) {
-  if (!users) {
-    users = getUsersData();
-  }
-
-  if (users) {
-    return users.filter((user) => user.email === email).length > 0;
-  }
-
-  return false;
-}
-
-function addUser(user) {
-  if (!users) {
-    users = getUsersData();
-  }
-
-  if (users) {
-    users = [...users, user];
-  } else {
-    users = [user];
-  }
-
-  localStorage.setItem("@healtht/users", JSON.stringify(users));
-}
-
-function getUser(email) {
-  if (!users) {
-    users = getUsersData();
-  }
-
-  if (users) {
-    return users.filter((user) => user.email === email)[0];
-  }
 }
 
 formSignin.addEventListener("submit", (e) => {

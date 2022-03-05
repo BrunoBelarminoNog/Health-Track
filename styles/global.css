@@ -194,6 +194,10 @@ a:hover {
    
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* scrollbar style */
 ::-webkit-scrollbar{
     
