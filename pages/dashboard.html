@@ -259,19 +259,27 @@
       </nav>
     </header>
     <main id="main-dashboard" class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-6 p-4">
+      <div class="row px-0">
+        <div class="col-12 col-md-6 px-0">
           <section
             id="water"
-            class="d-flex align-items-center justify-content-between dashboard__card"
+            class="d-flex align-items-center mx-4 mt-4 justify-content-between dashboard__card"
           >
+            <lottie-player
+              id="water-add-animation"
+              src="https://assets10.lottiefiles.com/packages/lf20_t8bekfgz.json"
+              style="width: 140px; height: 140px"
+              loop
+              >"></lottie-player
+            >
+
             <div class="water__content">
               <h3>Já se hidratou hoje?</h3>
               <p>Clique aqui a cada copo d’água de 300ml tomado.</p>
             </div>
             <div class="water__data">
               <span>HOJE</span>
-              <span>10</span>
+              <span class="water__data__span">0</span>
             </div>
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             <lottie-player
@@ -285,11 +293,11 @@
             ></lottie-player>
           </section>
           <section id="activities">
-            <div class="d-flex align-items-baseline">
+            <div class="d-flex align-items-baseline px-4">
               <h2>Atividades</h2>
               <a href="#">ver mais</a>
             </div>
-            <div class="activities__card dashboard__card">
+            <div class="activities__card dashboard__card mx-4">
               <div class="dashboard__card__add-button">
                 <div class="dashboard__card__add-button__wrapper">
                   <lottie-player
@@ -338,7 +346,7 @@
                 </table>
               </div>
             </div>
-            <div class="activities__favorites">
+            <div class="activities__favorites px-md-4">
               <div class="favorites__carrosel">
                 <ul
                   class="favorites__activities__cards"
@@ -412,11 +420,11 @@
             </div>
           </section>
           <section id="body">
-            <div class="d-flex align-items-baseline">
+            <div class="d-flex align-items-baseline px-4">
               <h2>Meu corpo</h2>
               <a href="#">ver mais</a>
             </div>
-            <div class="body__cards">
+            <div class="body__cards px-4">
               <div class="body__card body__card__weight">
                 <div class="body__card__data">
                   <span class="weight__data">72</span>
@@ -459,13 +467,13 @@
             </div>
           </section>
         </div>
-        <div class="col-12 col-md-6 px-4 px-md-5">
+        <div class="col-12 col-md-6 px-0 px-md-5">
           <section id="activities">
-            <div class="d-flex align-items-baseline">
+            <div class="d-flex align-items-baseline px-4">
               <h2>Dieta</h2>
               <a href="#">ver mais</a>
             </div>
-            <div class="diet__card dashboard__card">
+            <div class="diet__card dashboard__card mx-4">
               <div class="dashboard__card__add-button">
                 <div class="dashboard__card__add-button__wrapper">
                   <lottie-player
@@ -513,7 +521,7 @@
                 </table>
               </div>
             </div>
-            <div class="diet__favorites">
+            <div class="diet__favorites px-md-4">
               <div class="favorites__carrosel">
                 <ul id="favorites-diet-carrosel" class="favorites__diet__cards">
                   <li class="favorites__card">
@@ -558,17 +566,17 @@
             </div>
           </section>
           <section id="playlists">
-            <div class="d-flex align-items-baseline">
+            <div class="d-flex align-items-baseline px-4">
               <h2>Playlist's</h2>
               <a href="#">ver mais</a>
             </div>
-            <div class="d-flex subtitle">
+            <div class="d-flex subtitle px-4">
               <p>
                 Selecionamos as melhores playlists para seus momentos de
                 auto-cuidado.
               </p>
             </div>
-            <div class="playlists__favorites">
+            <div class="playlists__favorites px-md-4">
               <div class="favorites__carrosel">
                 <ul
                   id="favorites-playlists-carrosel"

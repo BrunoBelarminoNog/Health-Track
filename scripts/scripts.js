@@ -254,6 +254,32 @@ LottieInteractivity.create({
   ],
 });
 
+const waterCard = document.getElementById("water");
+const waterCardAnimation = document.getElementById("water-add-animation");
+const waterCardData = document.querySelector("#water .water__data__span");
+
+LottieInteractivity.create({
+  player: waterCardAnimation,
+  mode: "cursor",
+  actions: [
+    {
+      type: "click",
+      forceFlag: false,
+    },
+  ],
+});
+
+waterCard.addEventListener("click", () => {
+  waterCardAnimation.classList.add("water__animation--play");
+  waterCardAnimation.play();
+  setTimeout(() => {
+    waterCardAnimation.classList.remove("water__animation--play");
+  }, 700);
+
+  let currentValue = Number(waterCardData.innerHTML);
+  waterCardData.innerHTML = currentValue + 1;
+});
+
 function calculateIMC(height, weight) {
   let imc = (weight / ((height / 100) * (height / 100))).toFixed(2);
   let result = "";
