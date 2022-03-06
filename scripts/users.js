@@ -5,6 +5,10 @@ const USER_MOCK = {
   email: "john.doe@gmail.com",
   password: "Test@1234",
   birthday: "1991-12-19",
+  height: 184,
+  weight: 78,
+  sedentary: 2,
+  objectives: ["mind", "health"],
 };
 
 function getUsers() {

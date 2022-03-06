@@ -254,7 +254,53 @@ LottieInteractivity.create({
   ],
 });
 
-function calculateIMC() {}
+function calculateIMC(height, weight) {
+  let imc = (weight / ((height / 100) * (height / 100))).toFixed(2);
+  let result = "";
+
+  if (imc < 18.5) {
+    result = "abaixo do peso";
+  } else if (imc >= 18.5 && imc < 25) {
+    result = "peso normal";
+  } else if (imc >= 25 && imc < 30) {
+    result = "sobrepeso";
+  } else if (imc >= 30 && imc < 35) {
+    result = "obesidade grau I";
+  } else if (imc >= 35 && imc < 40) {
+    result = "obesidade grau II";
+  } else if (imc >= 40) {
+    result = "obesidade grau III";
+  }
+
+  return { imc, result };
+}
+
+const bodyCardWeight = document.querySelector(
+  "#body .body__card__weight .weight__data"
+);
+const bodyCardHeight = document.querySelector(
+  "#body .body__card__height .height__data"
+);
+
+const bodyCardIMCData = document.querySelector(
+  "#body .body__card__imc .imc__data"
+);
+const bodyCardIMCClassification = document.querySelector(
+  "#body .body__card__imc .imc__classification"
+);
+
+function updateInfosUser() {
+  bodyCardWeight.innerHTML = USER.weight;
+  bodyCardHeight.innerHTML = USER.height;
+
+  bodyCardIMCData.innerHTML = calculateIMC(USER.height, USER.weight).imc;
+  bodyCardIMCClassification.innerHTML = calculateIMC(
+    USER.height,
+    USER.weight
+  ).result;
+}
+
+updateInfosUser();
 
 // FORMULÁRIO FIRST SESSION
 
@@ -297,6 +343,7 @@ function saveFormData() {
 
 btnNextStep.addEventListener("click", () => {
   saveFormData();
+  updateInfosUser();
   document.getElementById("first-session").classList.add("hidden");
 });
 
