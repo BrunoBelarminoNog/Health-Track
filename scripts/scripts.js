@@ -118,7 +118,7 @@ let tl;
 headerDashboard.addEventListener("mouseenter", () => {
   tl = gsap.timeline();
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 992) {
     tl.to("#header-dashboard", {
       width: 188,
     }).to(
@@ -136,7 +136,7 @@ headerDashboard.addEventListener("mouseenter", () => {
 });
 
 mainDashboard.addEventListener("mouseenter", () => {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 992) {
     tl = gsap.timeline();
 
     tl.to("#header-dashboard", {
@@ -154,7 +154,7 @@ mainDashboard.addEventListener("mouseenter", () => {
 
 window.addEventListener("resize", () => {
   resizeForm();
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 992) {
     tl.kill();
 
     gsap.set("#header-dashboard", {
@@ -162,7 +162,7 @@ window.addEventListener("resize", () => {
     });
   }
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 992) {
     tl.kill();
 
     gsap.set("#header-dashboard", {
