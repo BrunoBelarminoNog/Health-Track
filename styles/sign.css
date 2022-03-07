@@ -163,32 +163,30 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   transform: translate(-50%, -50%);
-  border-radius: 8px;
-  font-size: 5rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   font-weight: 700;
   color: var(--text-standart);
 }
 
 .logo__sign__content svg {
-  width: 50%;
-  height: 100px;
+  height: 80px;
 }
 
-.logo__sign--image {
-  max-width: 180px;
-  mask-image: url("#mask");
+.logo__sign__content p {
+  width: 100%;
+  max-width: 350px;
+  margin-left: 16px;
+  margin-top: 32px;
+  display: none;
 }
 
-.logo__sign__reverse {
-  left: initial;
-  right: 42px;
-}
-
-.figure .logo-line {
-  fill: var(--text-standart);
+.logo__sign__content--reverse {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px;
 }
 
 .sign__container {
@@ -229,4 +227,9 @@
     padding-top: 0vh;
     padding: 72px 0;
   }
+
+  .logo__sign__content p {
+    display: flex;
+  }
+  
 }

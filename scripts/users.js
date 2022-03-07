@@ -13,7 +13,8 @@ const USER_MOCK = {
 
 function getUsers() {
   let usersStorage = JSON.parse(localStorage.getItem("@healtht/users"));
-  if (!usersStorage[0]?.email) {
+  if (!usersStorage) {
+    localStorage.setItem("@healtht/users", JSON.stringify([USER_MOCK]));
     usersStorage = [USER_MOCK];
   }
 
