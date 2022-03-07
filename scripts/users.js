@@ -13,7 +13,7 @@ const USER_MOCK = {
 
 function getUsers() {
   let usersStorage = JSON.parse(localStorage.getItem("@healtht/users"));
-  if (!usersStorage) {
+  if (!usersStorage[0]?.email) {
     usersStorage = [USER_MOCK];
   }
 
@@ -40,13 +40,18 @@ function addUser(user) {
   localStorage.setItem("@healtht/users", JSON.stringify(users));
 }
 
-function updateUser(updatedUser) {
-  users = getUsers();
+async function updateUser(updatedUser) {
+  users = await getUsers();
 
-  const index = users.findIndex((user) => user.email === updatedUser.email);
+  if (users.length > 0) {
+    const index = users.findIndex((user) => user.email === updatedUser.email);
+    users.splice(index, 1);
+    users = [updatedUser, ...users];
+  } else {
+    users = [updatedUser];
+  }
 
-  users.splice(index, 1, updatedUser);
-  localStorage.setItem("@healtht/users", JSON.stringify(users));
+  await localStorage.setItem("@healtht/users", JSON.stringify(users));
 }
 
 function verifyUserExists(email) {

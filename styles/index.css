@@ -1,40 +1,44 @@
-.background--image {
-  width: 100vw;
-  min-height: 100vh;
+.header__home {
+  width: 100%;
   position: fixed;
-  inset: 0;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--light-light);
 }
 
-.background--image img {
+.header__home__logo img{
+  height: 56px;
+}
+
+.image__home img {
+  height: calc(100vh - 100px);
   width: 100%;
-  height: 100vh;
   object-fit: cover;
-  opacity: 1;
-  background-color: var(--medium-dark);
-  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.theme-dark .background--image img {
+.home__section {
+  height: 100%;
+  min-height: 500px;
+  padding-top: 91px;
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 1;
-  background-color: var(--medium-dark);
-}
-
-@media screen and (min-width: 768px) {
-  .background--image {
-    width: 50vw;
-    inset: initial;
-    top: 0;
-    left: 0;
-  }
+  max-width: 1080px;
 }
 
 .nav--sign {
   width: 100%;
-  max-width: 360px;
+}
+
+.nav--sign h1 {
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  text-align: left;
+}
+
+.nav--sign p {
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  text-align: left;
+  font-weight: 600;
+  margin-top: 12px;
 }
 
 .nav--sign hr {
@@ -43,4 +47,69 @@
 
 .figure .logo-line {
   fill: var(--text-standart)
+}
+
+.promo__section {
+  height: 100vh;
+  min-height: 500px;
+  padding-top: 91px;
+  width: 100%;
+  max-width: 1080px;
+} 
+
+.image__promo img {
+  height: 50vh;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.content__promo {
+  width: 100%;
+}
+
+.content__promo h1 {
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  text-align: right;
+  color: var(--light-light);
+  font-weight: 600;
+}
+
+.content__promo p {
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  text-align: right;
+  font-weight: 600;
+  margin-top: 12px;
+  color: var(--light-light);
+}
+
+@media screen and (min-width: 768px) {
+  .home__section {
+    height: 100vh;
+    min-height: 700px;
+    padding-top: 91px;
+  }
+
+  .nav--sign {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .image__home img {
+    height: calc(100vh - 92px - 32px);
+    min-height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .image__promo img {
+    height: 70vh;
+    min-height: 300px;
+    object-fit: cover;
+  }
+  
+
+  .content__promo {
+    width: 100%;
+    max-width: 380px;
+  }
 }

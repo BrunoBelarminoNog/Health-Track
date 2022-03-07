@@ -1,135 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="theme-light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" />
 
-    <title>Health Track</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Mulish:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+  <title>Health Track</title>
 
-    <script src="./scripts/svg-inject.min.js"></script>
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Mulish:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-  <body>
-    <main class="container-fluid">
-      <figure class="background--image">
-        <img src="./assets/yoga_1.png" alt="Mulher praticando yoga" class="" />
-      </figure>
+  <script src="./scripts/svg-inject.min.js"></script>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/background.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+</head>
 
-      <div id="theme">
-        <div class="toggle">
-          <input id="switch" type="checkbox" name="theme" />
-          <label for="switch">Toggle</label>
+<body>
+  <header class="header__home d-flex py-3 px-4">
+    <figure class="header__home__logo">
+      <img src="./assets/images/logo_g.svg" alt="Logo Health Track" />
+    </figure>
+
+  </header>
+  <main class="container-fluid d-flex px-0 flex-column align-items-center justify-content-center">
+    <section class="row d-flex justify-content-center align-items-end home__section">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-start pb-5 justify-content-end">
+        <div class="d-flex fw-light flex-column mb-5 mt-5 nav--sign">
+          <h1>
+            Entre para o Health Track e conquiste a melhor versão de si mesmo!
+          </h1>
+          <p>
+            Iremos te ajudar a organizar suas metas, comemorar suas conquistas e te incentivar em sua superação.
+          </p>
+        </div>
+        <nav class="d-flex flex-column flex-md-row align-items-center justify-content-center nav--sign">
+          <a href="./pages/signup.html" class="btn mb-3 mb-md-0 btn-primary">Cadastrar</a>
+          <a href="./pages/signin.html" class="btn btn-outline-primary mx-md-3">Entrar</a>
+        </nav>
+      </div>
+      <div class="col-12 col-md-6 pb-5 d-flex flex-column align-items-center align-items-md-end justify-content-center">
+        <figure class="image__home">
+          <img src="./assets/images/home_health.jpg" alt="Mulher praticando corrida">
+        </figure>
+      </div>
+    </section>
+    <section class="row d-flex flex-column justify-content-center w-100 align-items-center position-relative">
+      <div class="background__animate  px-0">
+        <div id="particles-js"></div>
+      </div>
+      <div class="row d-flex px-0 justify-content-center align-items-center promo__section">
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-center justify-content-center">
+          <figure class="image__promo">
+            <img src="./assets/images/healthtrack_mobile.png" alt="Smartphone com o Health Track">
+          </figure>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex flex-column align-items-center pb-5 justify-content-center">
+          <div class="d-flex fw-light flex-column mb-5 mt-5 content__promo">
+            <h1>
+              Entre para o Health Track e conquiste a melhor versão de si mesmo!
+            </h1>
+            <p>
+              Iremos te ajudar a organizar suas metas, comemorar suas conquistas e te incentivar em sua superação.
+            </p>
+          </div>
         </div>
       </div>
 
-      <section class="row d-flex vh-100 justify-content-end align-items-center">
-        <div
-          class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center"
-        >
-          <figure class="figure">
-            <svg
-              width="211"
-              height="71"
-              viewBox="0 0 211 71"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M65.6659 43.6026C82.7593 26.1932 72.4255 9.46205 60.3427 5.05283C47.5114 0.369697 39.3422 11.0305 39.3422 11.0305C39.3422 11.0305 31.1686 0.369697 18.3374 5.05283C6.25449 9.46205 -4.07929 26.1932 13.0141 43.6026C18.0805 48.7629 23.024 53.4725 27.2326 57.3516"
-                stroke="#FF9F1C"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M18.59 39.9579V42.4579C19.5504 42.4579 20.4259 41.9077 20.8425 41.0424L18.59 39.9579ZM25.3639 25.889L27.5895 24.7503C27.157 23.905 26.2831 23.3777 25.3337 23.3892C24.3843 23.4006 23.5233 23.949 23.1114 24.8044L25.3639 25.889ZM36.8274 48.295L34.6018 49.4337C35.0243 50.2595 35.8694 50.7835 36.7969 50.7948C37.7244 50.8061 38.582 50.303 39.0246 49.4877L36.8274 48.295ZM46.7278 30.0575L48.69 28.5084C48.1692 27.8488 47.3518 27.4949 46.5144 27.5667C45.6769 27.6384 44.9316 28.1262 44.5306 28.8648L46.7278 30.0575ZM54.5438 39.9579L52.5816 41.507C53.0557 42.1075 53.7787 42.4579 54.5438 42.4579V39.9579ZM141.5 42.4579C142.881 42.4579 144 41.3386 144 39.9579C144 38.5772 142.881 37.4579 141.5 37.4579V42.4579ZM10.7739 37.4579C9.39321 37.4579 8.27393 38.5772 8.27393 39.9579C8.27393 41.3386 9.39321 42.4579 10.7739 42.4579V37.4579ZM20.8425 41.0424L27.6164 26.9735L23.1114 24.8044L16.3375 38.8733L20.8425 41.0424ZM23.1383 27.0277L34.6018 49.4337L39.0531 47.1563L27.5895 24.7503L23.1383 27.0277ZM39.0246 49.4877L48.9249 31.2503L44.5306 28.8648L34.6303 47.1023L39.0246 49.4877ZM44.7656 31.6067L52.5816 41.507L56.506 38.4088L48.69 28.5084L44.7656 31.6067ZM54.5438 42.4579H141.5V37.4579H54.5438V42.4579ZM18.59 37.4579H10.7739V42.4579H18.59V37.4579Z"
-                fill="#313638"
-                class="logo-line"
-              />
-              <path
-                d="M27.1208 57.2476C31.7226 61.4912 35.4598 64.7517 37.5417 66.541"
-                stroke="#F06543"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M6.76831 35.2679C8.20691 37.996 10.2531 40.7905 13.0142 43.6025C18.0805 48.7628 23.024 53.4725 27.2326 57.3515"
-                stroke="url(#paint0_linear_316_208)"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M150.846 44.814L153.992 44.294V48.402H158.828V51.028H153.992V56.566C153.992 57.658 154.165 58.438 154.512 58.906C154.859 59.374 155.448 59.608 156.28 59.608C156.852 59.608 157.355 59.5473 157.788 59.426C158.239 59.3047 158.594 59.192 158.854 59.088L159.374 61.584C159.01 61.74 158.533 61.896 157.944 62.052C157.355 62.2253 156.661 62.312 155.864 62.312C154.893 62.312 154.079 62.182 153.42 61.922C152.779 61.662 152.267 61.2893 151.886 60.804C151.505 60.3013 151.236 59.7033 151.08 59.01C150.924 58.2993 150.846 57.4933 150.846 56.592V44.814ZM169.617 51.236C169.357 51.1493 168.993 51.0627 168.525 50.976C168.075 50.872 167.546 50.82 166.939 50.82C166.593 50.82 166.22 50.8547 165.821 50.924C165.44 50.9933 165.171 51.054 165.015 51.106V62H161.869V49.052C162.476 48.8267 163.23 48.6187 164.131 48.428C165.05 48.22 166.064 48.116 167.173 48.116C167.381 48.116 167.624 48.1333 167.901 48.168C168.179 48.1853 168.456 48.22 168.733 48.272C169.011 48.3067 169.279 48.3587 169.539 48.428C169.799 48.48 170.007 48.532 170.163 48.584L169.617 51.236ZM177.14 59.79C178.11 59.79 178.847 59.738 179.35 59.634V56.15C179.176 56.098 178.925 56.046 178.596 55.994C178.266 55.942 177.902 55.916 177.504 55.916C177.157 55.916 176.802 55.942 176.438 55.994C176.091 56.046 175.77 56.1413 175.476 56.28C175.198 56.4187 174.973 56.618 174.8 56.878C174.626 57.1207 174.54 57.4327 174.54 57.814C174.54 58.5593 174.774 59.0793 175.242 59.374C175.71 59.6513 176.342 59.79 177.14 59.79ZM176.88 48.064C177.92 48.064 178.795 48.194 179.506 48.454C180.216 48.714 180.78 49.078 181.196 49.546C181.629 50.014 181.932 50.586 182.106 51.262C182.296 51.9207 182.392 52.6487 182.392 53.446V61.688C181.906 61.792 181.17 61.9133 180.182 62.052C179.211 62.208 178.11 62.286 176.88 62.286C176.065 62.286 175.32 62.208 174.644 62.052C173.968 61.896 173.387 61.6447 172.902 61.298C172.434 60.9513 172.061 60.5007 171.784 59.946C171.524 59.3913 171.394 58.7067 171.394 57.892C171.394 57.112 171.541 56.4533 171.836 55.916C172.148 55.3787 172.564 54.9453 173.084 54.616C173.604 54.2693 174.202 54.0267 174.878 53.888C175.571 53.732 176.29 53.654 177.036 53.654C177.382 53.654 177.746 53.68 178.128 53.732C178.509 53.7667 178.916 53.836 179.35 53.94V53.42C179.35 53.056 179.306 52.7093 179.22 52.38C179.133 52.0507 178.977 51.7647 178.752 51.522C178.544 51.262 178.258 51.0627 177.894 50.924C177.547 50.7853 177.105 50.716 176.568 50.716C175.84 50.716 175.172 50.768 174.566 50.872C173.959 50.976 173.465 51.0973 173.084 51.236L172.694 48.688C173.092 48.5493 173.673 48.4107 174.436 48.272C175.198 48.1333 176.013 48.064 176.88 48.064ZM185.49 55.214C185.49 54.2087 185.646 53.2727 185.958 52.406C186.27 51.522 186.712 50.7593 187.284 50.118C187.874 49.4767 188.584 48.974 189.416 48.61C190.248 48.246 191.184 48.064 192.224 48.064C193.507 48.064 194.72 48.298 195.864 48.766L195.188 51.34C194.824 51.184 194.408 51.054 193.94 50.95C193.49 50.846 193.004 50.794 192.484 50.794C191.254 50.794 190.318 51.184 189.676 51.964C189.035 52.7267 188.714 53.81 188.714 55.214C188.714 56.566 189.018 57.6407 189.624 58.438C190.231 59.218 191.254 59.608 192.692 59.608C193.23 59.608 193.758 59.556 194.278 59.452C194.798 59.348 195.249 59.218 195.63 59.062L196.072 61.662C195.726 61.8353 195.197 61.9913 194.486 62.13C193.793 62.2687 193.074 62.338 192.328 62.338C191.167 62.338 190.153 62.1647 189.286 61.818C188.437 61.454 187.726 60.96 187.154 60.336C186.6 59.6947 186.184 58.9407 185.906 58.074C185.629 57.19 185.49 56.2367 185.49 55.214ZM201.654 53.706C202.053 53.29 202.477 52.848 202.928 52.38C203.379 51.8947 203.821 51.418 204.254 50.95C204.687 50.4647 205.095 50.0053 205.476 49.572C205.875 49.1213 206.213 48.7313 206.49 48.402H210.208C209.341 49.3727 208.423 50.378 207.452 51.418C206.499 52.458 205.537 53.472 204.566 54.46C205.086 54.8933 205.632 55.422 206.204 56.046C206.776 56.6527 207.331 57.3027 207.868 57.996C208.405 58.6893 208.908 59.3827 209.376 60.076C209.844 60.7693 210.234 61.4107 210.546 62H206.906C206.594 61.4627 206.23 60.8993 205.814 60.31C205.415 59.7207 204.982 59.1487 204.514 58.594C204.046 58.0393 203.569 57.5193 203.084 57.034C202.599 56.5313 202.122 56.1067 201.654 55.76V62H198.508V42.344L201.654 41.824V53.706Z"
-                class="logo-line"
-              />
-              <path
-                d="M97.932 9.438H103.236V33H97.932V23.004H89.024V33H83.72V9.438H89.024V18.448H97.932V9.438ZM108.689 33V9.438H124.601V13.892H113.993V18.516H123.411V22.868H113.993V28.546H125.383V33H108.689ZM145.084 33C144.835 32.184 144.551 31.3453 144.234 30.484C143.939 29.6227 143.645 28.7613 143.35 27.9H134.17C133.875 28.7613 133.569 29.6227 133.252 30.484C132.957 31.3453 132.685 32.184 132.436 33H126.928C127.812 30.4613 128.651 28.1153 129.444 25.962C130.237 23.8087 131.008 21.78 131.756 19.876C132.527 17.972 133.275 16.17 134 14.47C134.748 12.7473 135.519 11.07 136.312 9.438H141.378C142.149 11.07 142.908 12.7473 143.656 14.47C144.404 16.17 145.152 17.972 145.9 19.876C146.671 21.78 147.453 23.8087 148.246 25.962C149.039 28.1153 149.878 30.4613 150.762 33H145.084ZM138.726 14.776C138.613 15.116 138.443 15.5807 138.216 16.17C137.989 16.7593 137.729 17.4393 137.434 18.21C137.139 18.9807 136.811 19.8307 136.448 20.76C136.108 21.6893 135.757 22.664 135.394 23.684H142.092C141.729 22.664 141.378 21.6893 141.038 20.76C140.698 19.8307 140.369 18.9807 140.052 18.21C139.757 17.4393 139.497 16.7593 139.27 16.17C139.043 15.5807 138.862 15.116 138.726 14.776ZM169.554 28.444V33H153.812V9.438H159.116V28.444H169.554ZM187.79 9.438V13.96H180.684V33H175.38V13.96H168.274V9.438H187.79ZM205.411 9.438H210.715V33H205.411V23.004H196.503V33H191.199V9.438H196.503V18.448H205.411V9.438Z"
-                fill="#FF9F1C"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_316_208"
-                  x1="2.13948"
-                  y1="27.6235"
-                  x2="4.79109"
-                  y2="70.8325"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0.287121" stop-color="#FF9F1C" />
-                  <stop offset="0.671875" stop-color="#F06543" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </figure>
+    </section>
+  </main>
 
-          <div class="d-flex flex-column mb-4 mt-5 px-4 nav--sign">
-            <p class="h2 text-center fw-light px-4">
-              Conquiste a melhor versão de si mesmo!
-            </p>
-            <hr class="mt-2" />
-          </div>
-          <nav
-            class="d-flex flex-column align-items-center justify-content-center px-4 nav--sign"
-          >
-            <a href="./pages/signup.html" class="btn mb-3 btn-primary"
-              >Registrar-se</a
-            >
-            <a href="./pages/signin.html" class="btn btn-outline-primary"
-              >Iniciar</a
-            >
-          </nav>
-        </div>
-      </section>
-    </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="scripts/particles.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+</body>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/scripts.js"></script>
-  </body>
 </html>

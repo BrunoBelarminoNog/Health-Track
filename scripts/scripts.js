@@ -131,7 +131,7 @@ particlesJS("particles-js", {
   retina_detect: true,
 });
 
-const USER = getUsers()[0];
+let USER = getUsers()[0];
 
 const headerDashboard = document.querySelector("#header-dashboard");
 const mainDashboard = document.querySelector("#main-dashboard");
@@ -316,6 +316,8 @@ const bodyCardIMCClassification = document.querySelector(
 );
 
 function updateInfosUser() {
+  USER = getUsers()[0];
+
   bodyCardWeight.innerHTML = USER.weight;
   bodyCardHeight.innerHTML = USER.height;
 
@@ -357,8 +359,8 @@ const btnNextStep = document.querySelector("#btn-next-step");
 
 let currentItem = 0;
 
-function saveFormData() {
-  updateUser({
+async function saveFormData() {
+  await updateUser({
     ...USER,
     weight,
     height,
@@ -367,8 +369,8 @@ function saveFormData() {
   });
 }
 
-btnNextStep.addEventListener("click", () => {
-  saveFormData();
+btnNextStep.addEventListener("click", async () => {
+  await saveFormData();
   updateInfosUser();
   document.getElementById("first-session").classList.add("hidden");
 });
