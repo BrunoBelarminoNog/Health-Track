@@ -1,4 +1,4 @@
-.background--image {
+.background__image {
   width: 100vw;
   height: 20vh;
   position: fixed;
@@ -11,7 +11,7 @@
   background-color: var(--brand-3);
 }
 
-.background--image > svg {
+.background__image > svg {
   width: 100%;
   height: 20vh;
   z-index: 5;
@@ -21,7 +21,7 @@
   transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.theme-dark .background--image svg {
+.theme-dark .background__image svg {
   width: 100%;
   height: 20vh;
   z-index: 5;
@@ -133,22 +133,22 @@
     transform: translate(300px, -120px) scale(1);
   }
 }
-.background--image svg #svg_ball_1--inject-1 {
+.background__image svg #svg_ball_1--inject-1 {
   animation: svg_ball_1 10s infinite alternate linear;
 }
-.background--image svg #svg_ball_2--inject-1 {
+.background__image svg #svg_ball_2--inject-1 {
   animation: svg_ball_2 10s infinite alternate linear;
 }
-.background--image svg #svg_ball_3--inject-1 {
+.background__image svg #svg_ball_3--inject-1 {
   animation: svg_ball_3 12s infinite alternate linear;
 }
-.background--image svg #svg_ball_4--inject-1 {
+.background__image svg #svg_ball_4--inject-1 {
   animation: svg_ball_4 10s infinite alternate linear;
 }
-.background--image svg #svg_ball_5--inject-1 {
+.background__image svg #svg_ball_5--inject-1 {
   animation: svg_ball_5 10s infinite alternate linear;
 }
-.logo--sign {
+.logo__sign {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -159,7 +159,7 @@
   -webkit-backdrop-filter: blur(50px);
 }
 
-.logo--sign--content {
+.logo__sign__content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -172,51 +172,42 @@
   color: var(--text-standart);
 }
 
-.logo--sign--content svg {
+.logo__sign__content svg {
   width: 50%;
   height: 100px;
 }
 
-.logo--sign--image {
+.logo__sign--image {
   max-width: 180px;
   mask-image: url("#mask");
 }
 
-.logo--sign__reverse {
+.logo__sign__reverse {
   left: initial;
   right: 42px;
-}
-
-.nav--sign {
-  width: 100%;
-  max-width: 360px;
-}
-
-.nav--sign hr {
-  width: 100%;
 }
 
 .figure .logo-line {
   fill: var(--text-standart);
 }
 
-.sign--container {
+.sign__container {
   padding-top: 25vh;
   padding-bottom: 20vh;
   z-index: 1;
 }
 
-.sign--container--content {
+.sign__container__content {
   max-width: 400px;
   width: 100%;
 }
 
-.sign--container--content svg {
+.sign__container__content svg {
   fill: black;
 }
 
 @media screen and (min-width: 768px) {
-  .background--image {
+  .background__image {
     width: 50vw;
     min-height: 100vh;
     inset: initial;
@@ -224,17 +215,17 @@
     left: 0;
   }
 
-  .background--image__reverse {
+  .background__image__reverse {
     left: initial;
     right: 0;
   }
 
-  .background--image > svg,
-  .theme-dark .background--image > svg {
+  .background__image > svg,
+  .theme-dark .background__image > svg {
     min-height: 100vh;
   }
 
-  .sign--container {
+  .sign__container {
     padding-top: 0vh;
     padding: 72px 0;
   }

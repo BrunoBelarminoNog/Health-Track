@@ -1,25 +1,3 @@
-// const html = document.querySelector("html");
-// const checkbox = document.querySelector("input[name=theme]");
-
-// const changeColors = () => {
-//   html.classList.toggle("theme-light");
-//   html.classList.toggle("theme-dark");
-// };
-
-// checkbox.addEventListener("change", changeColors);
-
-// const formSign = document.getElementById("form--signin");
-
-// formSign.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   window.location.href = "/pages/dashboard.html";
-// });
-
-// Animações GSAP
-// header
-
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS("particles-js", {
   particles: {
     number: {
@@ -174,8 +152,6 @@ mainDashboard.addEventListener("mouseenter", () => {
   }
 });
 
-let widthFormFirstSession = 0;
-
 window.addEventListener("resize", () => {
   resizeForm();
   if (window.innerWidth < 768) {
@@ -250,6 +226,7 @@ LottieInteractivity.create({
   actions: [
     {
       state: "hover",
+      forceFlag: false,
     },
   ],
 });

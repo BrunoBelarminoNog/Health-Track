@@ -25,23 +25,23 @@
   max-width: 1080px;
 }
 
-.nav--sign {
+.nav__sign {
   width: 100%;
 }
 
-.nav--sign h1 {
+.nav__sign h1 {
   font-size: clamp(1.2rem, 6vw, 2rem);
   text-align: left;
 }
 
-.nav--sign p {
+.nav__sign p {
   font-size: clamp(1rem, 4vw, 1.1rem);
   text-align: left;
   font-weight: 600;
   margin-top: 12px;
 }
 
-.nav--sign hr {
+.nav__sign hr {
   width: 100%;
 }
 
@@ -89,7 +89,7 @@
     padding-top: 91px;
   }
 
-  .nav--sign {
+  .nav__sign {
     width: 100%;
     max-width: 380px;
   }

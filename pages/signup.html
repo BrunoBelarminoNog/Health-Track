@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="theme-light">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -17,24 +17,24 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-  <script src="../scripts/svg-inject.min.js"></script>
-  <link rel="stylesheet" href="../styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/global.css" />
   <link rel="stylesheet" type="text/css" href="../styles/sign.css" />
+  <script src="../scripts/svg-inject.min.js"></script>
 </head>
 
 <body>
   <main class="container-fluid">
-    <div class="background--image background--image__reverse">
-      <img src="../assets/balls.svg" alt="background" onload="SVGInject(this)" />
+    <div class="background__image background__image__reverse">
+      <img src="../assets/images/balls.svg" alt="background" onload="SVGInject(this)" />
 
-      <div class="logo--sign">
-        <div class="logo--sign--content"></div>
+      <div class="logo__sign">
+        <div class="logo__sign__content"></div>
       </div>
     </div>
 
     <section class="row d-flex vh-100 justify-content-start align-items-center">
-      <div class="sign--container col-12 px-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-        <div class="sign--container--content mx-auto text-center">
+      <div class="sign__container col-12 px-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+        <div class="sign__container--content mx-auto text-center">
           <h1 class="h2 center mb-4">Crie sua conta</h1>
           <p>Entre agora mesmo para o mundo HEALTH Track!</p>
           <p>
@@ -42,7 +42,7 @@
             <a href="./signin.html">clique aqui</a> e acesse.
           </p>
         </div>
-        <form class="sign--container--content mx-auto mt-5" action="./signup.html" method="POST" id="form-signup">
+        <form class="sign__container__content mx-auto mt-5" action="./signup.html" method="POST" id="form-signup">
           <div class="mb-3 w-100">
             <label for="full-name" class="form-label">Nome completo</label>
             <div class="input__styled">
