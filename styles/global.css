@@ -185,6 +185,7 @@ body {
 
 .input__styled input:focus {
   box-shadow: 0 0 6px 3px rgba(253, 157, 13, 0.25);
+  border-color: transparent !important;
 }
 
 .input__styled input:focus + span.material-icons {
@@ -214,16 +215,4 @@ a:hover {
 
 .hidden {
   display: none !important;
-}
-
-/* scrollbar style */
-::-webkit-scrollbar {
-}
-::-webkit-scrollbar:hover {
-}
-::-webkit-scrollbar-track {
-}
-::-webkit-scrollbar-thumb {
-}
-::-webkit-scrollbar-thumb:hover {
 }
